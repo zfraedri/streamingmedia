@@ -61,41 +61,106 @@ table {
     --dark-navy: #020873;
     --darkest-navy: #020659;
     --purple: #590242;
-
-    /* FONT INFO */
+    --white: #FFFFFF;
 
 }
 
-
-
-
-/* UNIVERSAL * STYLES */
-* {
+/* BODY STYLES */
+body {
+    min-width: 375px;
+    margin: 0 auto;
+    background-color: var(--darkest-navy);
     font-family: Verdana, Geneva, Tahoma, sans-serf;
+    line-height: 1.1;
+    color: var(--white);
 }
 
 /* HEADER STYLES */
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 /* NAV STYLES */
+
+
+
 /* SECTION STYLES */
 
 /* H1 STYLES */
+h1 {
+    font-size: 1.25em;
+}
 /* P STYLES */
 
 /* MAIN STYLES */
 
 /* SECTION STYLES */
-/* H2 STYLES */
+/* H2 H3 STYLES */
+h2, h3{
+    font-size: 1em;
+}
+h2{
+    color: var(--purple);
+}
 
 /* ARTICLE STYLES */
 /* IMG STYLES */
 /* AUDIO STYLES */
 /* P STYLES */
+p {
+    font-size: 1em;
+}
 
+dd, dl{
+    font-size: 1em;
+}
+
+dl {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* TRENDING SCROLL STYLE */
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+
+/* PLAYLISTS SCROLL STYLE */
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
 /* SECTION A STYLES */
 
 /* FOOTER STYLES */
-
+footer {
+    background-color: var(--white);
+}
+footer p {
+    font-size: .75em;
+    color: var(--purple);
+}
 
 
 
@@ -103,3 +168,6 @@ table {
 
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 834px) {
+
+}
