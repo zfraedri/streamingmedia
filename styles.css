@@ -1,0 +1,105 @@
+/* CSS RESET TOOL */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* START OF BASE CSS */
+:root {
+    /* COLOR THEME */
+
+    --lightest-blue: #0D8DFB;
+    --light-blue: #2699FB;
+    --blue: #2104D9;
+    --navy: #030A8C;
+    --dark-navy: #020873;
+    --darkest-navy: #020659;
+    --purple: #590242;
+
+    /* FONT INFO */
+
+}
+
+
+
+
+/* UNIVERSAL * STYLES */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serf;
+}
+
+/* HEADER STYLES */
+
+/* NAV STYLES */
+/* SECTION STYLES */
+
+/* H1 STYLES */
+/* P STYLES */
+
+/* MAIN STYLES */
+
+/* SECTION STYLES */
+/* H2 STYLES */
+
+/* ARTICLE STYLES */
+/* IMG STYLES */
+/* AUDIO STYLES */
+/* P STYLES */
+
+/* SECTION A STYLES */
+
+/* FOOTER STYLES */
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
