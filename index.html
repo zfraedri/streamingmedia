@@ -12,12 +12,15 @@
     <body>
         <header>
             <nav>
+                <h2>Main Navigation</h2>
+                <input type="checkbox" id="dropdown">
+                <label for="dropdown"><span></span></label>
                 <ul>
-                    <li><a href="index.html">MuzakMaker</a></li>
+                    <li><a href="#">MuzakMaker</a></li>
                     <li><a href="#">Trending Songs</a></li>
                     <li><a href="#">Your playlists</a></li>
                     <li><a href="#">Curated Playlists</a></li>
-                    <li><a href="#"><img src="images/duke-silver.png" alt="user profile image"></a></li>
+                    <li><a href="user"><img src="images/duke-silver.png" alt="user profile image"></a></li>
                 </ul>
             </nav>
             
@@ -30,133 +33,164 @@
         <main>
             <section id="trending">
                 <h2>Trending Songs</h2>
-                <article id="aloma">
-                    <h3>Aloma</h3>
-                    <p>Artist Cali</p>
-                    <img src="images/aloma-cover.png" alt="Aloma Cover">
-                    <audio controls>
-                        <source src="audio/aloma.mp3" type="audio/mpeg">
-                    </audio>
-                </article>
-
-                <article id="my-road">
-                    <h3>My Road</h3>
-                    <p>Artist Nesterouk</p>
-                    <img src="images/my-road-cover.png" alt="My Road Cover">
-                    <audio controls>
-                        <source src="audio/my-road.mp3" type="audio/mpeg">
-                    </audio>   
-                </article>
-
-                <article id="papaya">
-                    <h3>Papaya</h3>
-                    <p>Artist Dredstudio</p>
-                    <img src="images/papaya-cover.png" alt="Papaya Cover">
-                    <audio controls>
-                        <source src="audio/papaya.mp3" type="audio/mpeg">
-                    </audio>
-                </article>
-
-                <article id="smoothies">
-                    <h3>Smoothies</h3>
-                    <p>Artist Black Rhomb</p>
-                    <img src="images/smoothies-cover.png" alt="Smoothies Cover">
-                    <audio controls>
-                        <source src="audio/smoothies.mp3" type="audio/mpeg">
-                    </audio>
-                </article>
-
-                <article id="successful-performance">
-                    <h3>Successful Performance</h3>
-                    <p>Artist Ricky Bombino</p>
-                    <img src="images/successful-performance-cover.png" alt="Successful Performance Cover">
-                    <audio controls>
-                        <source src="audio/successful-performance.mp3" type="audio/mpeg">
-                    </audio>
-                    
-                </article>
+                <div class="scroll">
+                    <section>
+                        <div>
+                            <h3>Aloma</h3>
+                                <dl>
+                                    <dt>Artist</dt>
+                                    <dd>Cali</dd>
+                                </dl>
+                        </div>
+                        <img src="images/aloma-cover.png" alt="white dove on black background">
+                        <audio
+                            controls
+                            src="audio/aloma.mp3">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>My Road</h3>
+                                <dl>
+                                    <dt>Artist</dt>
+                                    <dd>Nesterouk</dd>
+                                </dl>
+                        </div>
+                        <img src="images/my-road-cover.png" alt="Middle of desert highway">
+                        <audio
+                            controls
+                            src="audio/my-road.mp3">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Papaya</h3>
+                                <dl>
+                                    <dt>Artist</dt>
+                                    <dd>Dredstudio</dd>
+                                </dl>
+                        </div>
+                        <img src="images/papaya-cover.png" alt="Open papaya on green background">
+                        <audio
+                            controls
+                            src="audio/papaya.mp3">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Smoothies</h3>
+                                <dl>
+                                    <dt>Artist</dt>
+                                    <dd>Black Rhomb</dd>
+                                </dl>
+                        </div>
+                        <img src="images/smoothies-cover.png" alt="Fresh fruit and smoothie on white table">
+                        <audio
+                            controls
+                            src="audio/smoothies.mp3">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </section>
+                    <section>
+                        <div>
+                            <h3>Succesful Performance</h3>
+                                <dl>
+                                    <dt>Artist</dt>
+                                    <dd>Ricky Bombino</dd>
+                                </dl>
+                        </div>
+                        <img src="images/successful-performance-cover.png" alt="Man in red shirt excited in front of blue wall">
+                        <audio
+                            controls
+                            src="audio/successful-performance.mp3">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </section>
+                </div>
 
                 <a href="#" >More trending</a>
-    
+            
             </section>
 
             <section id="playlists">
                 <h2>Your Playlists</h2>
-                <dl>
-                    <dt>Best of 2020</dt>
-                    <dd>
-                        <img src="images/best-of-2020-cover.png" alt="Best of 2020 playlist cover">
-                        <p>The music that got you through the lock down.</p> 
-                    </dd>
-                    <dt>Pumpkin Spice</dt>
-                    <dd>
-                        <img src="images/pumpkin-spice-cover.png" alt="Pumpkin Spice playlist Cover">
-                        <p>Creamy and spicy, just like your favorite autumnal latte.</p> 
-                    </dd>
-                    <dt>Quiet Storm</dt>
-                    <dd>
-                        <img src="images/quiet-storm-cover.png" alt="Quiet Storm playlist Cover">
-                        <p>Slow tempos and relaxed rhythms. </p> 
-                    </dd>
-                    <dt>Smooth Jazz</dt>
-                    <dd>
-                        <img src="images/smooth-jazz-cover.png" alt="Smooth Jazz playlist Cover">
-                        <p>The pioneers of smooth jazz</p> 
-                    </dd>
-                    <dt>Smooth Study</dt>
-                    <dd>
-                        <img src="images/smooth-study-cover.png" alt="Smooth Study playlist Cover">
-                        <p>Background music to keep you going while you study. </p>
-                    </dd>
-                </dl>
+                <figure>
+                    <dl id="userlist">
+                        <dt>Best of 2020</dt>
+                        <dd>
+                            <img src="images/best-of-2020-cover.png" alt="Best of 2020 playlist cover">
+                            <p>The music that got you through the lock down.</p> 
+                        </dd>
+                        <dt>Pumpkin Spice</dt>
+                        <dd>
+                            <img src="images/pumpkin-spice-cover.png" alt="Pumpkin Spice playlist Cover">
+                            <p>Creamy and spicy, just like your favorite autumnal latte.</p> 
+                        </dd>
+                        <dt>Quiet Storm</dt>
+                        <dd>
+                            <img src="images/quiet-storm-cover.png" alt="Quiet Storm playlist Cover">
+                            <p>Slow tempos and relaxed rhythms. </p> 
+                        </dd>
+                        <dt>Smooth Jazz</dt>
+                        <dd>
+                            <img src="images/smooth-jazz-cover.png" alt="Smooth Jazz playlist Cover">
+                            <p>The pioneers of smooth jazz</p> 
+                        </dd>
+                        <dt>Smooth Study</dt>
+                        <dd>
+                            <img src="images/smooth-study-cover.png" alt="Smooth Study playlist Cover">
+                            <p>Background music to keep you going while you study. </p>
+                        </dd>
+                    </dl>
+                <figcaption><a href="#">All your playlists</a></figcaption>
+                </figure>
+            
 
-                <a href="#">All your playlists</a>
-    
-            </section>
-
-            <section id="playlists">
+            
                 <h2>Curated Playlists</h2>
-                <dl>
-                    <dt>Boozy Brunch</dt>
-                    <dd>
-                        <img src="images/boozy-brunch-cover.png" alt="Boozy Brunch playlist Cover">
-                        <p>Light up the afternoon with these energetic hits.</p>
-                    </dd>
+                <figure>
+                    <dl id="curated">
+                        <dt>Boozy Brunch</dt>
+                        <dd>
+                            <img src="images/boozy-brunch-cover.png" alt="Boozy Brunch playlist Cover">
+                            <p>Light up the afternoon with these energetic hits.</p>
+                        </dd>
+                        
+                        <dt>Dinner Party</dt>
+                        <dd>
+                            <img src="images/dinner-party-cover.png" alt="Dinner Party playlist Cover">
+                            <p>Background music to give your party life, but allow your guests to chat.</p>
+                        </dd>
                     
-                    <dt>Dinner Party</dt>
-                    <dd>
-                        <img src="images/dinner-party-cover.png" alt="Dinner Party playlist Cover">
-                        <p>Background music to give your party life, but allow your guests to chat.</p>
-                    </dd>
+                        <dt>Mellow</dt>
+                        <dd>
+                            <img src="images/mellow-cover.png" alt="Mellow playlist Cover">
+                            <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
+                        </dd>
                 
-                    <dt>Mellow</dt>
-                    <dd>
-                        <img src="images/mellow-cover.png" alt="Mellow playlist Cover">
-                        <p>Relax after a stressful day with this collection of extra smooth jazz.</p>
-                    </dd>
-               
-                    <dt>Jazz and Chill</dt>
-                    <dd>
-                        <img src="images/jazz-chill-cover.png" alt="Jazz Chill playlist Cover">
-                        <p>Set the mood with these silky sounds. </p>
-                    </dd>
-                
-                    <dt>Jazz Saxophone</dt>
-                    <dd>
-                        <img src="images/smooth-saxophone-cover.png" alt="Smooth Saxophone playlist Cover">
-                        <p>The greatest collection of your sax favorites. </p>
-                    </dd>
+                        <dt>Jazz and Chill</dt>
+                        <dd>
+                            <img src="images/jazz-chill-cover.png" alt="Jazz Chill playlist Cover">
+                            <p>Set the mood with these silky sounds. </p>
+                        </dd>
                     
-                </dl>
-
-                <a href="#">More curated</a>
-                
+                        <dt>Jazz Saxophone</dt>
+                        <dd>
+                            <img src="images/smooth-saxophone-cover.png" alt="Smooth Saxophone playlist Cover">
+                            <p>The greatest collection of your sax favorites. </p>
+                        </dd>
+                    </dl>
+                <figcaption><a href="#">More curated</a></figcaption>
+                </figure>   
             </section>
 
         </main>
         
         <footer>
-            <p>Copyright 2022 Smooth Jazz</p>
+            <p><small>Copyright 2022 Smooth Jazz</small></p>
         </footer>
     </body>
 </html>

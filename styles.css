@@ -50,8 +50,11 @@ table {
 }
 
 
-/* START OF BASE CSS */
+
+
+
 :root {
+
     /* COLOR THEME */
 
     --lightest-blue: #0D8DFB;
@@ -62,66 +65,206 @@ table {
     --darkest-navy: #020659;
     --purple: #590242;
     --white: #FFFFFF;
+    --gray: #c9c9c9;
+
+    /* FONT STACK */
+    --font: Verdana, Geneva, Tahoma, sans-serf;
 
 }
 
 /* BODY STYLES */
 body {
-    min-width: 375px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "footer";
+    width: 375px;
     margin: 0 auto;
     background-color: var(--darkest-navy);
-    font-family: Verdana, Geneva, Tahoma, sans-serf;
+    font-family: var(--font);
     line-height: 1.1;
     color: var(--white);
 }
-
+/* LINK A STYLES */
+a{
+	text-decoration: none;
+	color: var(--wht);
+	padding: 1.5rem;
+}
 /* HEADER STYLES */
 header {
-    display: grid;
-    grid-template-columns: 1fr;
+    grid-area: header;
+    width: 100%;
+    
+}
+/* MENU STYLES */
+nav {
+    width:375px;
+    background-color: var(--navy);
+}
+nav ul {
+    text-align:center;
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    max-height:0;
+    transition: max-height .2s ease-out;
+}
+nav h2 {
+    visibility:hidden;
+    height:1px;
+}
+nav li a {
+    display:block;
+    padding:20px 20px;
+    text-decoration:none;
+    color:var(--white);
+}
+nav a:hover, nav input:hover {
+    background-color: var(--purple);
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display:none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
 }
 
-/* NAV STYLES */
-
-
-
-/* SECTION STYLES */
 
 /* H1 STYLES */
 h1 {
     font-size: 1.25em;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    
 }
-/* P STYLES */
-
-/* MAIN STYLES */
-
-/* SECTION STYLES */
-/* H2 H3 STYLES */
-h2, h3{
-    font-size: 1em;
-}
-h2{
-    color: var(--purple);
-}
-
-/* ARTICLE STYLES */
-/* IMG STYLES */
-/* AUDIO STYLES */
 /* P STYLES */
 p {
-    font-size: 1em;
+    padding: 0 1rem 1rem 1rem;
+}
+/* MAIN STYLES */
+main {
+    grid-area: main;
+    background-color: var(--white);
+    width: 375px;
+    padding-bottom: 30px;
 }
 
-dd, dl{
-    font-size: 1em;
+/* SECTION STYLES */
+section h2{
+    padding: 15px;
 }
 
+/* .SCROLL STYLES */
+.scroll {   
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: scroll;
+    margin-bottom: 1rem;
+}
+.scroll section {
+    margin: 10px;
+    position: relative;
+}
+.scroll div dl {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
 dl {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
+    display: flex;
+}
+dt {
+    padding-right: 5px;
+}
+.scroll dd {
+    color: var(--purple)
+}
+
+audio {
+    position: absolute;
+    bottom: 200px;
+    left: 5px;
+}
+
+#trending section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray);
+    margin: 0px 10px;
+    
+}
+#trending div {
+    order: 2;
+}
+#trending p {
+    display: inline;
+}
+#trending dt{
+    color: var(--purple);
+    display: inline;
+    font-style: italic;
+}
+
+/* AUDIO STYLES */
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+    opacity: 70%;
 }
 
 /* TRENDING SCROLL STYLE */
@@ -138,6 +281,21 @@ dl {
 
 }
 
+
+/* PLAYLISTS STYLES */
+#playlists dd {
+    display: grid;
+    grid-template-rows: 1fr .5fr 1fr;
+    background-color: var(--lightest-blue);
+}
+
+#curated {
+    background-color: var(--navy);
+}
+#userlist {
+    background-color: var(--light-blue);
+}
+
 /* PLAYLISTS SCROLL STYLE */
 #playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
 
@@ -151,14 +309,55 @@ dl {
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
 
 }
+
+
+
+/* H2 H3 STYLES */
+h2, h3{
+    font-size: 1rem;
+    color: var(--purple);
+    font-weight: bolder;
+    text-transform: uppercase;
+    
+}
+h2{
+    color: var(--purple);
+    margin-left: 15px;
+}
+section h2 {
+    padding-top: 50px;
+}
+h3{
+    padding: 10px;
+}
+
+
 /* SECTION A STYLES */
+section a {
+    display: inline-block;
+    background-color: var(--purple);
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 4px;
+    padding: .5rem 1.5rem;
+}
+section a:hover {
+    background-color: var(--darkest-navy);
+}
 
 /* FOOTER STYLES */
 footer {
+    grid-area: footer;
     background-color: var(--white);
+    
 }
 footer p {
     font-size: .75em;
+    padding-top: 50px;
+    color: var(--purple);
+    text-align: center;
+}
+small {
     color: var(--purple);
 }
 
@@ -166,8 +365,31 @@ footer p {
 
 
 
-
 /* MEDIA QUERIES */
 @media screen and (min-width: 834px) {
+    body {
+        grid-template-areas: ;
+    }
+    nav {
+        width:834px;
+        margin: 0 auto;
+      }
+    nav ul {
+        overflow:visible;
+        position:absolute;
+        top:25px;
+        display:grid;
+        grid-template-columns: repeat(5, 1fr);
+        }
+    nav li a {
+        padding:20px;
+    }
+    label span, input {
+        display:none;
+    }
 
+    main {
+        grid-area: main;
+        width:834px;
+    }
 }
