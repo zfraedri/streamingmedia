@@ -375,6 +375,7 @@ h2, h3{
     color: var(--purple);
     font-weight: bolder;
     text-transform: uppercase;
+    display: block;
     
 }
 h2{
@@ -402,6 +403,7 @@ section a:hover {
     background-color: var(--darkest-navy);
 }
 
+
 /* FOOTER STYLES */
 footer {
     grid-area: footer;
@@ -428,14 +430,35 @@ small {
     main {
         width: 834px;
     }
+    section a {
+        float: right;
+    }
     .verticals {
+        margin-top: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .verticals #playlists {
-        grid-column: 1/2;
+        grid-column: 1;
     }
     .verticals #curated {
-        grid-column: 2/3;
+        grid-column: 2;
     }
+    #playlists {
+        grid-template-rows: repeat(5,1fr);
+    }
+    .verticals #playlists{
+        display: grid;
+        grid-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .verticals .scroll {   
+        display: grid;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 1fr;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin-top: 5px;
+    }
+
 }
