@@ -57,8 +57,8 @@ table {
 
     /* COLOR THEME */
 
-    --lightest-blue: #0D8DFB;
-    --light-blue: #2699FB;
+    --light-blue: #0D8DFB;
+    --lightest-blue: #2699FB;
     --blue: #2104D9;
     --navy: #030A8C;
     --dark-navy: #020873;
@@ -98,12 +98,15 @@ a{
 header {
     grid-area: header;
     width: 100%;
-    
+}
+#smoothjazz {
+    background-image: linear-gradient(to right, var(--navy) , black);
 }
 /* MENU STYLES */
 nav {
     width:375px;
     background-color: var(--navy);
+    text-transform: uppercase;
 }
 nav ul {
     text-align:center;
@@ -250,6 +253,7 @@ audio {
     left: 5px;
 }
 
+/* TRENDING STYLES */
 #trending section {
     display: flex;
     flex-direction: column;
@@ -300,12 +304,12 @@ audio::-webkit-media-controls-enclosure {
 
 /* PLAYLISTS STYLES */
 #playlists .scroll{
-    background-color: var(--light-blue);
+    background-color: var(--lightest-blue);
 }
 #playlists section {
     display: flex;
     flex-direction: column;
-    background-color: var(--lightest-blue);
+    background-color: var(--light-blue);
 }
 #playlists section img {
     order: 1;
@@ -325,12 +329,12 @@ audio::-webkit-media-controls-enclosure {
 
 /* CURATED STYLES */
 #curated .scroll{
-    background-color: var(--blue)
+    background-color: var(--navy)
 }
 #curated section{
     display: flex;
     flex-direction: column;
-    background-color: var(--navy);
+    background-color: var(--dark-navy);
 }
 #curated section img {
     order: 1;
@@ -416,29 +420,22 @@ small {
 
 
 
-
-
 /* MEDIA QUERIES */
 @media screen and (min-width: 834px) {
-    nav {
-        width:834px;
-        margin: 0 auto;
-      }
-    nav ul {
-        overflow:visible;
-        position:absolute;
-        top:25px;
-        display:grid;
-        grid-template-columns: repeat(5, 1fr);
-        }
-    nav li a {
-        padding:20px;
+    body {
+        width: 834px;
     }
-    label span, input {
-        display:none;
-    }
-
     main {
-        width:834px;
+        width: 834px;
+    }
+    .verticals {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .verticals #playlists {
+        grid-column: 1/2;
+    }
+    .verticals #curated {
+        grid-column: 2/3;
     }
 }
